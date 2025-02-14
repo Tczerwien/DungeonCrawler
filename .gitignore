@@ -1,0 +1,15 @@
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Compiled class files
+*.class
+
+# Logs and temporary files
+*.log
+*.tmp
+
+
