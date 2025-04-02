@@ -5,14 +5,16 @@ import java.util.ArrayList;
 
 public class DynamicSprite extends SolidSprite {
     private boolean isWalking = true;
-    private double speed = 5.0;
+    private double speed;
     private final int spriteSheetNumberOfColumn = 10;
     private int timeBetweenFrame = 200;
     private Direction direction;
 
-    public DynamicSprite(Image image, double x, double y, double width, double height, Direction direction) {
-        super(image, (int)x, (int)y, (int)width, (int)height);
-        this.direction = direction;
+    //Private constructor for builder
+    DynamicSprite(DynamicSpriteBuilder builder) {
+        super(builder.image, (int) builder.x, (int) builder.y, (int) builder.width, (int) builder.height);
+        this.direction = builder.direction;
+        this.speed = builder.speed;
     }
 
     public void setDirection(Direction direction) {

@@ -15,7 +15,9 @@ public class Main {
        displayZoneFrame.setSize(400, 600);
        displayZoneFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-       DynamicSprite hero = new DynamicSprite(ImageIO.read(new File("./img/heroTileSheetLowRes.png")), 200, 300, 48, 50, Direction.SOUTH);
+       //DynamicSprite hero = new DynamicSprite(ImageIO.read(new File("./img/heroTileSheetLowRes.png")), 200, 300, 48, 50, Direction.SOUTH);
+        DynamicSprite hero = new DynamicSpriteBuilder(ImageIO.read(new File("./img/heroTileSheetLowRes.png"))).setX(200)
+                .setY(300).setWidth(48).setHeight(50).setDirection(Direction.SOUTH).setSpeed(5.0).build();
 
        renderEngine = new RenderEngine();
        gameEngine = new GameEngine(hero);

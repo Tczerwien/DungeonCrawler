@@ -10,12 +10,10 @@ public class GameEngine implements Engine, KeyListener {
 
     @Override
     public void update(){
-
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     @Override
@@ -30,7 +28,6 @@ public class GameEngine implements Engine, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
 
 
